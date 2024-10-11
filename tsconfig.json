@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext", // generate ES modules
+    "moduleResolution": "NodeNext", //how typescript will find code tha you import
+    "target": "ES2020", //flavor of javascript that your code will compile to (set to a modern version)
+    "sourceMap": true, // maps compiled javascript code back to typescript
+    "outDir": "dist" // location of compiled code
+  },
+
+  "include": ["src/**/*"] //tells compiler where to find typescript code
+}
