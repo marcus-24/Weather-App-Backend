@@ -1,6 +1,7 @@
 import express, { Application } from "express";
 import morgan from "morgan";
 import { getLocationData, getPublicFolderPath } from "./utils.js";
+import cors from "cors";
 
 const app: Application = express();
 const PORT: number = Number(process.env.PORT) || 8080;
@@ -8,6 +9,8 @@ const PUBLIC_FOLDER: string = getPublicFolderPath(); // must be an abs path to s
 
 // Use static server to serve the website in the public folder;
 app.use(express.static(PUBLIC_FOLDER));
+
+app.use(cors()); // enable cors to commmunicate with frontend
 
 app.use(morgan("dev")); //Add logging for all endpoints
 
