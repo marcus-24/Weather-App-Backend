@@ -38,7 +38,7 @@ export function getWeatherData(
   axios
     .get(`${LOCATION_URL}?q=${city}&api_key=${API_KEY}`)
     .then((resp) => {
-      const top_match = resp.data[0];
+      const top_match = resp.data[0]; //Get the top choice in the list.
       return `${WEATHER_URL}/${top_match["lat"]},${top_match["lon"]}`;
     })
     .then((url) => {
