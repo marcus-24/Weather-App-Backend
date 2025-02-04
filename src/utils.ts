@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 
 const API_KEY: string = process.env.API_KEY;
 const LOCATION_URL: string = "https://geocode.maps.co/search";
